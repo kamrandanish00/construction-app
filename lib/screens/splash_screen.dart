@@ -1,3 +1,4 @@
+import 'package:construction_app/screens/get_a_quote.dart';
 import 'package:construction_app/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -93,19 +94,25 @@ class SplashScreen extends StatelessWidget {
           SizedBox(
             height: 10.h,
           ),
-          Container(
-            height: 7.h,
-            width: 60.w,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20.sp),
-            ),
-            child: Center(
-              child: Text(
-                'Get a Quote',
-                style: TextStyle(
-                  color: Color(0xffFF9900),
-                  fontSize: 20.sp,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (ctx) => QuickQuote()));
+            },
+            child: Container(
+              height: 7.h,
+              width: 60.w,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20.sp),
+              ),
+              child: Center(
+                child: Text(
+                  'Get a Quote',
+                  style: TextStyle(
+                    color: Color(0xffFF9900),
+                    fontSize: 20.sp,
+                  ),
                 ),
               ),
             ),
